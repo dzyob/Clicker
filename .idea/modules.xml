@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ p0081viewById/ p0081viewById.iml" filepath="$PROJECT_DIR$/ p0081viewById/ p0081viewById.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clicker/clicker.iml" filepath="$PROJECT_DIR$/clicker/clicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clicker_for_5.0/clicker_for_5.0.iml" filepath="$PROJECT_DIR$/clicker_for_5.0/clicker_for_5.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/first2.iml" filepath="$PROJECT_DIR$/first2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0031firstproject/p0031firstproject.iml" filepath="$PROJECT_DIR$/p0031firstproject/p0031firstproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0041basicviews/p0041basicviews.iml" filepath="$PROJECT_DIR$/p0041basicviews/p0041basicviews.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0051layoutfiles/p0051layoutfiles.iml" filepath="$PROJECT_DIR$/p0051layoutfiles/p0051layoutfiles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0061layouts/p0061layouts.iml" filepath="$PROJECT_DIR$/p0061layouts/p0061layouts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0072layoutProp/p0072layoutProp.iml" filepath="$PROJECT_DIR$/p0072layoutProp/p0072layoutProp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0091onClickButtons/p0091onClickButtons.iml" filepath="$PROJECT_DIR$/p0091onClickButtons/p0091onClickButtons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0101listener/p0101listener.iml" filepath="$PROJECT_DIR$/p0101listener/p0101listener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0102activityListener/p0102activityListener.iml" filepath="$PROJECT_DIR$/p0102activityListener/p0102activityListener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0111resValues/p0111resValues.iml" filepath="$PROJECT_DIR$/p0111resValues/p0111resValues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0121logAndMess/p0121logAndMess.iml" filepath="$PROJECT_DIR$/p0121logAndMess/p0121logAndMess.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0131menuSimple/p0131menuSimple.iml" filepath="$PROJECT_DIR$/p0131menuSimple/p0131menuSimple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0141menuAdv/p0141menuAdv.iml" filepath="$PROJECT_DIR$/p0141menuAdv/p0141menuAdv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0142menuAdv/p0142menuAdv.iml" filepath="$PROJECT_DIR$/p0142menuAdv/p0142menuAdv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0180constraintlayoutintro/p0180constraintlayoutintro.iml" filepath="$PROJECT_DIR$/p0180constraintlayoutintro/p0180constraintlayoutintro.iml" />
+    </modules>
+  </component>
+</project>
