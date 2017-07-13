@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     Button plusOne;
     Button reset;
     int n = 0;
+    Toast toast;
+    Toast toastSize;
     public void actionPlus (int n){
         this.n = n + 1;
     }
@@ -37,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
                 switch (v.getId()){
                     case R.id.plusOne:
                         actionPlus(n);
-                        Toast toast = Toast.makeText(getApplicationContext(), "0", Toast.LENGTH_SHORT);
-                        toast.setGravity(Gravity.CENTER, 0, 0);
                         if (n == 50) {
                             numb.setTextColor(Color.parseColor("#8B0000"));
                             toast =  Toast.makeText(getApplicationContext(), "ПОЛТИШОК!!!", Toast.LENGTH_SHORT);
@@ -101,12 +101,15 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case MENU_SIZE_20:
                 numb.setTextSize(20);
+                toastSize =  Toast.makeText(getApplicationContext(), "Размер текста = 20", Toast.LENGTH_SHORT);
                 break;
             case MENU_SIZE_40:
                 numb.setTextSize(40);
+                toastSize =  Toast.makeText(getApplicationContext(), "Размер текста = 40", Toast.LENGTH_SHORT);
                 break;
             case MENU_SIZE_60:
                 numb.setTextSize(60);
+                toastSize =  Toast.makeText(getApplicationContext(), "Размер текста = 60", Toast.LENGTH_SHORT);
                 break;
         }
         return super.onContextItemSelected(item);
