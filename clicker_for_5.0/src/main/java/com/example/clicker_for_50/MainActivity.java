@@ -102,14 +102,17 @@ public class MainActivity extends AppCompatActivity {
             case MENU_SIZE_20:
                 numb.setTextSize(20);
                 toastSize =  Toast.makeText(getApplicationContext(), "Размер текста = 20", Toast.LENGTH_SHORT);
+                toastSize.show();
                 break;
             case MENU_SIZE_40:
                 numb.setTextSize(40);
                 toastSize =  Toast.makeText(getApplicationContext(), "Размер текста = 40", Toast.LENGTH_SHORT);
+                toastSize.show();
                 break;
             case MENU_SIZE_60:
                 numb.setTextSize(60);
                 toastSize =  Toast.makeText(getApplicationContext(), "Размер текста = 60", Toast.LENGTH_SHORT);
+                toastSize.show();
                 break;
         }
         return super.onContextItemSelected(item);
