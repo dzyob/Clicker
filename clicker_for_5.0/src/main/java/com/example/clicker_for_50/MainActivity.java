@@ -5,10 +5,11 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;
-import android.view.Gravity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
@@ -39,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
         polzunok = (SeekBar) findViewById(R.id.polzunok);
         polzunok.setOnSeekBarChangeListener(polzunokAction);
-
 
         numb = (TextView) findViewById(R.id.numb);
         plusOne = (Button) findViewById(R.id.plusOne);
@@ -148,4 +148,23 @@ public class MainActivity extends AppCompatActivity {
         public void onStopTrackingTouch(SeekBar seekBar) {
         }
     };
+
+    //Создаём меню для чекбокса
+    public boolean onCreateOptionsMenu (Menu menu) {
+        menu.add(0, 1, 0, "Доп.настройки: ВКЛ");
+        menu.add(0, 2, 0, "Доп.настройки: ВЫКЛ");
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case 1:
+                polzunok.setVisibility(View.VISIBLE);
+                break;
+            case 2:
+                polzunok.setVisibility(View.INVISIBLE);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
