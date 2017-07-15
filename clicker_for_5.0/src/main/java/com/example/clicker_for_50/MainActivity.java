@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     Toast toastSize;
     SeekBar polzunok;
     TextView commit;
+    TextView commitForMenu;
+    ImageView cursorMenuImage;
     ImageView cursorImg;
     ConstraintLayout.LayoutParams sizetPlusOne;
 
@@ -45,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
         numb = (TextView) findViewById(R.id.numb);
         commit = (TextView) findViewById(R.id.commit);
+        commitForMenu = (TextView) findViewById(R.id.commitForMenu);
+        cursorMenuImage = (ImageView) findViewById(R.id.cursorMenuImage);
         cursorImg = (ImageView) findViewById(R.id.cursorImg);
         plusOne = (Button) findViewById(R.id.plusOne);
         reset = (Button) findViewById(R.id.reset);
@@ -167,11 +171,15 @@ public class MainActivity extends AppCompatActivity {
                 polzunok.setVisibility(View.VISIBLE);
                 commit.setVisibility(View.VISIBLE);
                 cursorImg.setVisibility(View.VISIBLE);
+                commitForMenu.setVisibility(View.INVISIBLE);
+                cursorMenuImage.setVisibility(View.INVISIBLE);
                 break;
             case 2:
                 polzunok.setVisibility(View.INVISIBLE);
                 commit.setVisibility(View.INVISIBLE);
                 cursorImg.setVisibility(View.INVISIBLE);
+                commitForMenu.setVisibility(View.VISIBLE);
+                cursorMenuImage.setVisibility(View.VISIBLE);
                 break;
         }
         return super.onOptionsItemSelected(item);
