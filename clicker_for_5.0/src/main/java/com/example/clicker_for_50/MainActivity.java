@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     Toast toast;
     Toast toastSize;
     SeekBar polzunok;
+    TextView commit;
+    ImageView cursorImg;
     ConstraintLayout.LayoutParams sizetPlusOne;
 
     //Метод плюсования - САМОЕ ГЛАВНОЕ В ЭТОМ НЕВЕРОЯТНОМ ПРИЛОЖЕНИИ
@@ -42,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         polzunok.setOnSeekBarChangeListener(polzunokAction);
 
         numb = (TextView) findViewById(R.id.numb);
+        commit = (TextView) findViewById(R.id.commit);
+        cursorImg = (ImageView) findViewById(R.id.cursorImg);
         plusOne = (Button) findViewById(R.id.plusOne);
         reset = (Button) findViewById(R.id.reset);
 
@@ -156,13 +160,18 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    //Описываем действия кнопок меню
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case 1:
                 polzunok.setVisibility(View.VISIBLE);
+                commit.setVisibility(View.VISIBLE);
+                cursorImg.setVisibility(View.VISIBLE);
                 break;
             case 2:
                 polzunok.setVisibility(View.INVISIBLE);
+                commit.setVisibility(View.INVISIBLE);
+                cursorImg.setVisibility(View.INVISIBLE);
                 break;
         }
         return super.onOptionsItemSelected(item);

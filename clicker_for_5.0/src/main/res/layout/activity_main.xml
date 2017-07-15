@@ -98,5 +98,32 @@
         tools:layout_editor_absoluteY="332dp"
         android:visibility="invisible"/>
 
+    <TextView
+        android:id="@+id/commit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="зажми циферки и измени их размер"
+        app:layout_constraintBottom_toBottomOf="@+id/numb"
+        android:layout_marginBottom="59dp"
+        android:visibility="invisible"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageView
+        android:id="@+id/cursorImg"
+        android:layout_width="71dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/cursor"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/commit"
+        app:layout_constraintRight_toLeftOf="@+id/numb"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/numb"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.6"
+        tools:layout_editor_absoluteY="123dp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="40dp" />
+
 
 </android.support.constraint.ConstraintLayout>
