@@ -1,6 +1,7 @@
 package com.example.clicker_for_50;
 
 import android.graphics.Color;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -10,29 +11,41 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Начинаем описывать переменные
     TextView numb;
     Button plusOne;
     Button reset;
     int n = 0;
     Toast toast;
     Toast toastSize;
+    SeekBar polzunok;
+    ConstraintLayout.LayoutParams sizetPlusOne;
+
+    //Метод плюсования - САМОЕ ГЛАВНОЕ В ЭТОМ НЕВЕРОЯТНОМ ПРИЛОЖЕНИИ
     public void actionPlus (int n){
         this.n = n + 1;
     }
 
-    @Override
+    //Основные действия при нажатии клавишь
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        polzunok = (SeekBar) findViewById(R.id.polzunok);
+        polzunok.setOnSeekBarChangeListener(polzunokAction);
+
+
         numb = (TextView) findViewById(R.id.numb);
         plusOne = (Button) findViewById(R.id.plusOne);
         reset = (Button) findViewById(R.id.reset);
+
+        sizetPlusOne = (ConstraintLayout.LayoutParams) plusOne.getLayoutParams();
 
         View.OnClickListener oclBtn = new View.OnClickListener() {
             public void onClick(View v) {
@@ -76,14 +89,14 @@ public class MainActivity extends AppCompatActivity {
         registerForContextMenu(numb);
         plusOne.setOnClickListener(oclBtn);
         reset.setOnClickListener(oclBtn);
-
-
     }
 
+    //Переменные пунктов контекстного меню
     final int MENU_SIZE_20 = 4;
     final int MENU_SIZE_40 = 5;
     final int MENU_SIZE_60 = 6;
 
+    //Создаём контекстное меню
     public void onCreateContextMenu(ContextMenu menu, View v,
                                     ContextMenu.ContextMenuInfo menuInfo) {
         // TODO Auto-generated method stub
@@ -96,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Описание взаимодействия с контекстным меню
     public boolean onContextItemSelected(MenuItem item) {
         // TODO Auto-generated method stub
         switch (item.getItemId()) {
@@ -118,4 +132,20 @@ public class MainActivity extends AppCompatActivity {
         return super.onContextItemSelected(item);
     }
 
+    //Описываем действие ползунка
+    SeekBar.OnSeekBarChangeListener polzunokAction = new SeekBar.OnSeekBarChangeListener() {
+
+        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            int width = progress+154;
+            int height = progress+102;
+            sizetPlusOne.width= width;
+            sizetPlusOne.height = height;
+            plusOne.requestLayout();
+        }
+
+        public void onStartTrackingTouch(SeekBar seekBar) {
+        }
+        public void onStopTrackingTouch(SeekBar seekBar) {
+        }
+    };
 }
