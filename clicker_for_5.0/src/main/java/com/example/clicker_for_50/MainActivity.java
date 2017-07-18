@@ -129,24 +129,22 @@ public class MainActivity extends AppCompatActivity {
     //Переменные пунктов контекстного меню
     final int MENU_SIZE_20 = 4;
     final int MENU_SIZE_40 = 5;
-    final int MENU_SIZE_60 = 6;
+    final int MENU_SIZE_50 = 6;
 
     //Создаём контекстное меню
     public void onCreateContextMenu(ContextMenu menu, View v,
                                     ContextMenu.ContextMenuInfo menuInfo) {
-        // TODO Auto-generated method stub
         switch (v.getId()) {
             case R.id.numb:
                 menu.add(0, MENU_SIZE_20, 0, "20");
                 menu.add(0, MENU_SIZE_40, 0, "40");
-                menu.add(0, MENU_SIZE_60, 0, "60");
+                menu.add(0, MENU_SIZE_50, 0, "50");
                 break;
         }
     }
 
     //Описание взаимодействия с контекстным меню
     public boolean onContextItemSelected(MenuItem item) {
-        // TODO Auto-generated method stub
         switch (item.getItemId()) {
             case MENU_SIZE_20:
                 numb.setTextSize(20);
@@ -158,9 +156,9 @@ public class MainActivity extends AppCompatActivity {
                 toastSize =  Toast.makeText(getApplicationContext(), "Размер текста = 40", Toast.LENGTH_SHORT);
                 toastSize.show();
                 break;
-            case MENU_SIZE_60:
-                numb.setTextSize(60);
-                toastSize =  Toast.makeText(getApplicationContext(), "Размер текста = 60", Toast.LENGTH_SHORT);
+            case MENU_SIZE_50:
+                numb.setTextSize(50);
+                toastSize =  Toast.makeText(getApplicationContext(), "Размер текста = 50", Toast.LENGTH_SHORT);
                 toastSize.show();
                 break;
         }
