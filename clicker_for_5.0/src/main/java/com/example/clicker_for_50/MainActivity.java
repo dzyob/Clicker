@@ -189,6 +189,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu (Menu menu) {
         menu.add(0, 1, 0, "Доп.настройки: ВКЛ");
         menu.add(0, 2, 0, "Доп.настройки: ВЫКЛ");
+        menu.add(0, 3, 0, "Выход");
         return super.onCreateOptionsMenu(menu);
 
     }
@@ -209,6 +210,9 @@ public class MainActivity extends AppCompatActivity {
                 cursorImg.setVisibility(View.INVISIBLE);
                 commitForMenu.setVisibility(View.VISIBLE);
                 cursorMenuImage.setVisibility(View.VISIBLE);
+                break;
+            case 3:
+                finish();
                 break;
         }
 
