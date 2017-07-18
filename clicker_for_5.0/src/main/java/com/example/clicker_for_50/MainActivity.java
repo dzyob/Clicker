@@ -21,19 +21,19 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     //Начинаем описывать переменные
-    TextView numb;
-    TextView welcome;
-    Button plusOne;
-    Button reset;
-    int n = 0;
-    Toast toast;
-    Toast toastSize;
-    SeekBar polzunok;
-    TextView commit;
-    TextView commitForMenu;
-    ImageView cursorMenuImage;
-    ImageView cursorImg;
-    ConstraintLayout.LayoutParams sizetPlusOne;
+    TextView numb; //циферблат
+    TextView welcome; //строчка приветствия
+    Button plusOne; //кнопка плюсования +1
+    Button reset; //кнопка сброса
+    int n = 0; //переменная плюсования
+    Toast toast; //сообщения ачивок
+    Toast toastSize; //сообщения изменения размера шрифта для циферблата
+    SeekBar polzunok; //ползунок изменения размера кнопки
+    TextView commit; //подсказка для вызова контекстного меню
+    TextView commitForMenu; //подсказка для меню
+    ImageView cursorMenuImage; //картинка стрелки для меню
+    ImageView cursorImg; //картинка стрелки для циферблата
+    ConstraintLayout.LayoutParams sizetPlusOne; //переменная для передачи параметров кнопки
 
     //Метод плюсования - САМОЕ ГЛАВНОЕ В ЭТОМ НЕВЕРОЯТНОМ ПРИЛОЖЕНИИ
     public void actionPlus (int n){
