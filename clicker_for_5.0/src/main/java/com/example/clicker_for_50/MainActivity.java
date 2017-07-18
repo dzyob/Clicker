@@ -72,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
                         if (n > 0) {
                             welcome.setVisibility(View.INVISIBLE);
                         }
+                        if (n == 10) {
+                            Animation anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.transfernumb);
+                            numb.startAnimation(anim);
+                        }
                         if (n == 50) {
                             numb.setTextColor(Color.parseColor("#8B0000"));
                             toast =  Toast.makeText(getApplicationContext(), "ПОЛТИШОК!!!", Toast.LENGTH_SHORT);
@@ -86,12 +90,23 @@ public class MainActivity extends AppCompatActivity {
                             toast =  Toast.makeText(getApplicationContext(), "СКОРО!!!", Toast.LENGTH_SHORT);
                             toast.show();
                         }
+
+                        if (n == 350) {
+                            Animation anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alphanumb);
+                            numb.startAnimation(anim);
+                        }
                         if (n == 437) {
                             toast =  Toast.makeText(getApplicationContext(), "ЛОЛ КЕК ЧЕБУРЕК!!!", Toast.LENGTH_SHORT);
                             LinearLayout toastContainer = (LinearLayout) toast.getView();
                             ImageView catImageView = new ImageView(getApplicationContext());
                             catImageView.setImageResource(R.drawable.trollface);
                             toastContainer.addView(catImageView, 0);
+                            toast.show();
+                        }
+                        if (n == 500) {
+                            Animation anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotatenumb);
+                            numb.startAnimation(anim);
+                            toast =  Toast.makeText(getApplicationContext(), "Сейчас укачает", Toast.LENGTH_SHORT);
                             toast.show();
                         }
                         String l = "" + n;

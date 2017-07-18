@@ -23,6 +23,8 @@
       <module fileurl="file://$PROJECT_DIR$/p0171dynamicLayout2/p0171dynamicLayout2.iml" filepath="$PROJECT_DIR$/p0171dynamicLayout2/p0171dynamicLayout2.iml" />
       <module fileurl="file://$PROJECT_DIR$/p0180constraintlayoutintro/p0180constraintlayoutintro.iml" filepath="$PROJECT_DIR$/p0180constraintlayoutintro/p0180constraintlayoutintro.iml" />
       <module fileurl="file://$PROJECT_DIR$/p0181dynamicLayout3/p0181dynamicLayout3.iml" filepath="$PROJECT_DIR$/p0181dynamicLayout3/p0181dynamicLayout3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0191simpleCalculator/p0191simpleCalculator.iml" filepath="$PROJECT_DIR$/p0191simpleCalculator/p0191simpleCalculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p0201simpleAnimation/p0201simpleAnimation.iml" filepath="$PROJECT_DIR$/p0201simpleAnimation/p0201simpleAnimation.iml" />
       <module fileurl="file://$PROJECT_DIR$/pP0161dynamicLayout/pP0161dynamicLayout.iml" filepath="$PROJECT_DIR$/pP0161dynamicLayout/pP0161dynamicLayout.iml" />
     </modules>
   </component>
