@@ -1,10 +1,11 @@
 package p0151contextmenu.twoactivitystate;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-public class ActivityTwo extends AppCompatActivity {
+public class ActivityTwo extends Activity {
 
     final String TAG = "States";
 
