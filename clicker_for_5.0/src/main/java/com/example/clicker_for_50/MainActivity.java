@@ -1,5 +1,6 @@
 package com.example.clicker_for_50;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -108,6 +109,11 @@ public class MainActivity extends AppCompatActivity {
                                 numb.startAnimation(anim);
                                 toast =  Toast.makeText(getApplicationContext(), "Сейчас укачает", Toast.LENGTH_SHORT);
                                 toast.show();
+                                break;
+                            case 570:
+                                Intent intent2 = new Intent(MainActivity.this, Congratulations.class);
+                                startActivity(intent2);
+                                finish();
                                 break;
                         }
                         String l = "" + n;
