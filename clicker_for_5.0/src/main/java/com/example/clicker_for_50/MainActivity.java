@@ -4,12 +4,14 @@ import android.graphics.Color;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.ActionMode;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Начинаем описывать переменные
     TextView numb;
+    TextView welcome;
     Button plusOne;
     Button reset;
     int n = 0;
@@ -46,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         polzunok.setOnSeekBarChangeListener(polzunokAction);
 
         numb = (TextView) findViewById(R.id.numb);
+        welcome = (TextView) findViewById(R.id.welcome);
         commit = (TextView) findViewById(R.id.commit);
         commitForMenu = (TextView) findViewById(R.id.commitForMenu);
         cursorMenuImage = (ImageView) findViewById(R.id.cursorMenuImage);
@@ -55,11 +59,19 @@ public class MainActivity extends AppCompatActivity {
 
         sizetPlusOne = (ConstraintLayout.LayoutParams) plusOne.getLayoutParams();
 
+        //Вертим Анимацию
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.myrotate);
+        welcome.startAnimation(anim);
+
+        //Начинаем считать
         View.OnClickListener oclBtn = new View.OnClickListener() {
             public void onClick(View v) {
                 switch (v.getId()){
                     case R.id.plusOne:
                         actionPlus(n);
+                        if (n > 0) {
+                            welcome.setVisibility(View.INVISIBLE);
+                        }
                         if (n == 50) {
                             numb.setTextColor(Color.parseColor("#8B0000"));
                             toast =  Toast.makeText(getApplicationContext(), "ПОЛТИШОК!!!", Toast.LENGTH_SHORT);
@@ -97,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
         registerForContextMenu(numb);
         plusOne.setOnClickListener(oclBtn);
         reset.setOnClickListener(oclBtn);
+
     }
 
     //Переменные пунктов контекстного меню
@@ -162,6 +175,7 @@ public class MainActivity extends AppCompatActivity {
         menu.add(0, 1, 0, "Доп.настройки: ВКЛ");
         menu.add(0, 2, 0, "Доп.настройки: ВЫКЛ");
         return super.onCreateOptionsMenu(menu);
+
     }
 
     //Описываем действия кнопок меню
@@ -182,6 +196,7 @@ public class MainActivity extends AppCompatActivity {
                 cursorMenuImage.setVisibility(View.VISIBLE);
                 break;
         }
+
         return super.onOptionsItemSelected(item);
     }
 }
