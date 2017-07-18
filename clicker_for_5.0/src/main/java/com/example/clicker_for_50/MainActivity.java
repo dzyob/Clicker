@@ -72,42 +72,43 @@ public class MainActivity extends AppCompatActivity {
                         if (n > 0) {
                             welcome.setVisibility(View.INVISIBLE);
                         }
-                        if (n == 10) {
-                            Animation anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.transfernumb);
-                            numb.startAnimation(anim);
-                        }
-                        if (n == 50) {
-                            numb.setTextColor(Color.parseColor("#8B0000"));
-                            toast =  Toast.makeText(getApplicationContext(), "ПОЛТИШОК!!!", Toast.LENGTH_SHORT);
-                            toast.show();
-                        }
-                        if (n == 100) {
-                            numb.setTextColor(Color.parseColor("#FF4500"));
-                            toast =  Toast.makeText(getApplicationContext(), "СОТОЧКА!!!", Toast.LENGTH_SHORT);
-                            toast.show();
-                        }
-                        if (n == 233) {
-                            toast =  Toast.makeText(getApplicationContext(), "СКОРО!!!", Toast.LENGTH_SHORT);
-                            toast.show();
-                        }
-
-                        if (n == 350) {
-                            Animation anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alphanumb);
-                            numb.startAnimation(anim);
-                        }
-                        if (n == 437) {
-                            toast =  Toast.makeText(getApplicationContext(), "ЛОЛ КЕК ЧЕБУРЕК!!!", Toast.LENGTH_SHORT);
-                            LinearLayout toastContainer = (LinearLayout) toast.getView();
-                            ImageView catImageView = new ImageView(getApplicationContext());
-                            catImageView.setImageResource(R.drawable.trollface);
-                            toastContainer.addView(catImageView, 0);
-                            toast.show();
-                        }
-                        if (n == 500) {
-                            Animation anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotatenumb);
-                            numb.startAnimation(anim);
-                            toast =  Toast.makeText(getApplicationContext(), "Сейчас укачает", Toast.LENGTH_SHORT);
-                            toast.show();
+                        switch (n) {
+                            case 10:
+                                Animation anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.transfernumb);
+                                numb.startAnimation(anim);
+                                break;
+                            case 50:
+                                numb.setTextColor(Color.parseColor("#8B0000"));
+                                toast =  Toast.makeText(getApplicationContext(), "ПОЛТИШОК!!!", Toast.LENGTH_SHORT);
+                                toast.show();
+                                break;
+                            case 100:
+                                numb.setTextColor(Color.parseColor("#FF4500"));
+                                toast =  Toast.makeText(getApplicationContext(), "СОТОЧКА!!!", Toast.LENGTH_SHORT);
+                                toast.show();
+                                break;
+                            case 233:
+                                toast =  Toast.makeText(getApplicationContext(), "СКОРО!!!", Toast.LENGTH_SHORT);
+                                toast.show();
+                                break;
+                            case 350:
+                                anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alphanumb);
+                                numb.startAnimation(anim);
+                                break;
+                            case 437:
+                                toast =  Toast.makeText(getApplicationContext(), "ЛОЛ КЕК ЧЕБУРЕК!!!", Toast.LENGTH_SHORT);
+                                LinearLayout toastContainer = (LinearLayout) toast.getView();
+                                ImageView catImageView = new ImageView(getApplicationContext());
+                                catImageView.setImageResource(R.drawable.trollface);
+                                toastContainer.addView(catImageView, 0);
+                                toast.show();
+                                break;
+                            case 500:
+                                anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotatenumb);
+                                numb.startAnimation(anim);
+                                toast =  Toast.makeText(getApplicationContext(), "Сейчас укачает", Toast.LENGTH_SHORT);
+                                toast.show();
+                                break;
                         }
                         String l = "" + n;
                         numb.setText(l);
@@ -120,11 +121,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
-
         registerForContextMenu(numb);
         plusOne.setOnClickListener(oclBtn);
         reset.setOnClickListener(oclBtn);
-
     }
 
     //Переменные пунктов контекстного меню
@@ -215,7 +214,6 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 break;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }
